@@ -1,7 +1,5 @@
-const { models, default: mongoose } = require("mongoose");
-
 //comes after db file and edited server file
-const mongoose = reqire("mongoose");
+const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
   // schema is a blue print of that object datatype
@@ -20,4 +18,4 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-models.export = mongoose("User", UserSchema);
+module.exports = mongoose.model("User", UserSchema);
