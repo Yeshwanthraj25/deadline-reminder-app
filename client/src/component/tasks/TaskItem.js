@@ -16,7 +16,7 @@ const TaskItem = ({ task, onTaskDeleted, onTaskCompleted }) => {
 
         // Send DELETE request to the specific task endpoint
         await axios.delete(
-          `http://localhost:5005/api/tasks/${task._id}`,
+          `https://deadline-reminder-app.onrender.com/api/tasks/${task._id}`,
           config
         );
 

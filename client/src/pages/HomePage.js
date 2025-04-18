@@ -29,7 +29,10 @@ const HomePage = () => {
           headers: { "x-auth-token": token },
         };
         // Make GET request to the tasks endpoint
-        const res = await axios.get("http://localhost:5005/api/tasks", config);
+        const res = await axios.get(
+          "https://deadline-reminder-app.onrender.com/api/tasks",
+          config
+        );
         setTasks(res.data); // Update state with fetched tasks
       } catch (err) {
         console.error(

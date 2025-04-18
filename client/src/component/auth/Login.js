@@ -22,10 +22,14 @@ const Login = () => {
     try {
       console.log("Attempting login:", { email }); // Log attempt
       // ** NOTE: This request WILL FAIL until Day 3 backend exists **
-      const res = await axios.post("http://localhost:5005/api/auth/login", {
-        email,
-        password,
-      });
+
+      const res = await axios.post(
+        "https://deadline-reminder-app.onrender.com/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
 
       console.log("Login response (will likely not run yet):", res.data);
       localStorage.setItem("token", res.data.token); // Store token
