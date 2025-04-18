@@ -7,9 +7,15 @@ const express = require("express");
 const connectDB = require("./config/db");
 //editing after setting up db file from config
 
+//day 4 cors
+const cors = require("cors");
+
 connectDB();
 //editted after db file
 const app = express();
+
+//day4edited
+app.use(cors());
 
 app.use(express.json());
 //edited after db file(parsing incoming JSON format)
