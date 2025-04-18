@@ -30,6 +30,9 @@ app.get("/", (req, res) => {
 // --- Define Routes ---day 3
 app.use("/api/auth", require("./routes/auth"));
 
+//day 5
+app.use("/api/tasks", require("./routes/tasks"));
+
 // Define the port number the server will listen on
 const PORT = process.env.PORT || 5005;
 
